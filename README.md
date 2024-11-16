@@ -77,7 +77,7 @@ Arch Linux:
 sudo pacman -S python python-pip
 ```
 
-2. Install Required Python Libraries
+## 2. Install Required Python Libraries
 The script provided earlier uses two Python libraries: Faker and Pandas (optional but recommended for better CSV handling).
 
 Open Command Prompt / Terminal:
@@ -125,7 +125,7 @@ pip list
 
 Look for Faker and pandas in the list.
 
-3. Create the Python Script
+## 3. Create the Python Script
 
 Open a Text Editor or IDE:
 
@@ -212,7 +212,7 @@ Save the Script:
 Filename: Save the file with a .py extension, e.g., generate_users.py.
 Location: Choose a directory you can easily navigate to via the command line (e.g., Desktop, Documents).
 
-4. Run the Python Script
+## 4. Run the Python Script
 Step-by-Step Instructions:
 Open Command Prompt / Terminal:
 
@@ -300,24 +300,22 @@ Open the file using Microsoft Excel, Google Sheets, or any text editor to view t
 
     - If you're using a virtual environment, ensure it's activated before installing packages and running the script.
 
-c. Permission Denied Error
+#### c. Permission Denied Error
 
-Symptom: Errors related to file writing permissions.
+- Symptom: Errors related to file writing permissions.
+- Solution:
+    - Run Command Prompt/Terminal as Administrator:
 
-Solution:
-
-Run Command Prompt/Terminal as Administrator:
-
-Windows: Right-click on Command Prompt and select ```Run``` as administrator.
-macOS/Linux: Use sudo if necessary, though for writing to your user directories, this typically isn't required.
+- Windows: Right-click on Command Prompt and select ```Run``` as administrator.
+- macOS/Linux: Use ```sudo``` if necessary, though for writing to your user directories, this typically isn't required.
 
 Change Directory Permissions: Ensure you have write permissions to the directory where you're trying to create the CSV file.
-d. Script Errors or Unexpected Behavior
-Solution:
-Double-Check the Script: Ensure there are no syntax errors or typos.
-Print Debug Statements: Add print statements in the script to debug and understand where it might be failing.
-Refer to Error Messages: Python error messages are usually descriptive. Read them carefully to identify the issue.
-6. Additional Tips
+#### d. Script Errors or Unexpected Behavior
+- Solution:
+    - Double-Check the Script: Ensure there are no syntax errors or typos.
+    - Print Debug Statements: Add print statements in the script to debug and understand where it might be failing.
+    - Refer to Error Messages: Python error messages are usually descriptive. Read them carefully to identify the issue.
+## 6. Additional Tips
 a. Using an Integrated Development Environment (IDE)
 Recommended IDEs:
 
@@ -332,49 +330,41 @@ Debugging Tools: Identify and fix issues efficiently.
 b. Virtual Environments
 Purpose: Isolate project dependencies to prevent conflicts between different projects.
 
-Creating a Virtual Environment:
+### Creating a Virtual Environment:
 
-bash
-Copy code
+````bash
 python -m venv myenv
-Activating the Virtual Environment:
+````
+#### Activating the Virtual Environment:
 
-Windows:
-bash
-Copy code
+##### Windows:
+```bash
 myenv\Scripts\activate
-macOS/Linux:
-bash
-Copy code
+```
+##### macOS/Linux:
+```bash
 source myenv/bin/activate
-Installing Libraries Within Virtual Environment:
+```
+#### Installing Libraries Within Virtual Environment:
 
-bash
-Copy code
+```bash
 pip install Faker pandas
+```
 Deactivating the Virtual Environment:
 
-bash
-Copy code
+````bash
 deactivate
-c. Exploring Python Further
-Learn Python Basics: Understanding variables, data structures, loops, and functions will help you customize scripts as needed.
-
-Resources:
-Official Python Tutorial
-Automate the Boring Stuff with Python
-Codecademy's Python Course
-Using Jupyter Notebooks: Great for experimenting with code snippets and visualizing data.
+````
 
 Installation:
-bash
-Copy code
+````bash
 pip install notebook
+````
 Running Jupyter Notebook:
-bash
-Copy code
+````bash
 jupyter notebook
-7. Alternative Approach: Using Online Python Environments
+````
+## 7. Alternative Approach: Using Online Python Environments
 If installing Python locally isn't an option, you can use online platforms to run your Python scripts.
 
 a. Google Colab
@@ -387,10 +377,10 @@ Click on "New Notebook".
 Install Required Libraries:
 
 In the first cell, install Faker:
-python
-Copy code
+````python
 !pip install Faker
 Run the cell by pressing Shift + Enter.
+````
 Copy and Paste the Script:
 
 In a new cell, paste the Python script.
@@ -398,10 +388,10 @@ Modify the save_to_csv function to save the CSV file to Google Drive or download
 Download the CSV:
 
 Use the following code snippet to download the CSV:
-python
-Copy code
+````python
 from google.colab import files
 files.download('users.csv')
+````
 b. Repl.it
 Visit Repl.it:
 
@@ -412,23 +402,24 @@ Click on "Create", select Python, and name your project.
 Install Libraries:
 
 In the shell or terminal within Repl.it, run:
-bash
-Copy code
+````bash
 pip install Faker
+````
 Paste and Run the Script:
 
 Add the Python script to the main file and run it.
 Download the generated users.csv from the file explorer.
-8. Final Verification
+
+## 8. Final Verification
 After successfully running the script, ensure that the generated users.csv file contains the expected data.
 
-Open the CSV File:
+#### Open the CSV File:
 
 Use Microsoft Excel, Google Sheets, or any text editor.
 Verify Columns:
 
 Ensure all the required headers are present:
-UserPrincipalName
+````UserPrincipalName
 DisplayName
 FirstName
 LastName
@@ -437,20 +428,23 @@ JobTitle
 Department
 Password
 UsageLocation
+````
 Check Data Integrity:
 
 Review a few entries to ensure that the data looks realistic and follows the correct format.
 Use in Your Application:
 
 Now that your CSV is ready, you can use it to import users into Active Directory or Microsoft Entra ID as needed.
-Summary
+
+### Summary
 Running a Python script involves several steps, but by following this guide, you can:
 
-Install Python on your operating system.
-Install necessary libraries using pip.
-Create and customize the Python script to generate your CSV file.
-Execute the script via the command line to produce the users.csv file.
-Verify and utilize the generated CSV as required.
+- Install Python on your operating system.
+- Install necessary libraries using pip.
+- Create and customize the Python script to generate your CSV file.
+- Execute the script via the command line to produce the users.csv file.
+- Verify and utilize the generated CSV as required.
+
 Remember, practice makes perfect! Don't hesitate to experiment with the script to better understand how it works and to tailor it to your specific needs.
 
 If you encounter any issues or have further questions, feel free to ask!
